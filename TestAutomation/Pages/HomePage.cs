@@ -9,12 +9,10 @@ using System.Threading.Tasks;
 
 namespace TestAutomation.Pages
 {
-    internal class HomePage
+    internal class HomePage : BasePage
     {
 
         public string Elements = "//div[contains(@class, 'mt-4')]//h5[text() = 'Elements']";
-
-
 
         public void ClickOnElementsButton(IWebDriver driver)
         {
@@ -23,17 +21,6 @@ namespace TestAutomation.Pages
             ScrollTillElement(driver, ElementsButton);
             ElementsButton.Click();
         }
-
-        public IWebElement WaitUntilElementExists(IWebDriver driver, By locator)
-        {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(8));
-            return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(locator));
-        }
-
-        public void ScrollTillElement(IWebDriver driver, IWebElement element)
-        {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("arguments[0].scrollIntoView(true);", element);
-        }
+       
     }
 }

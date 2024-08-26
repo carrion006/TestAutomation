@@ -6,7 +6,7 @@ using WebDriverManager.DriverConfigs.Impl;
 
 namespace TestAutomation.Utilities
 {
-    internal class BaseClass
+    public class BaseClass
     {
         public IWebDriver driver;
 

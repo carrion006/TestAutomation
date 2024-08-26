@@ -1,5 +1,9 @@
 {
     "APP": {
         "URL": "https://demoqa.com/"
+    },
+    "Data": {
+        "TestData1": "Sample",
+        "NoSearchResultTable":  "No row"
     }
 }
